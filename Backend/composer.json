@@ -1,0 +1,14 @@
+{
+    "require": {
+        "slim/http": "^1.0",
+        "guzzlehttp/psr7": "^1.6",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "slim/psr7": "^1.2",
+        "slim/slim": "^4.5"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    }
+}
