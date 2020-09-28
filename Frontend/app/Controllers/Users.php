@@ -117,29 +117,18 @@ class Users extends Controller {
     
     public function delete_user( $user_id = NULL){
         $url = "http://localhost:8000/api/user/".$user_id;
+
         $ch = curl_init();
+
         curl_setopt($ch, CURLOPT_URL, $url);
+
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+
         $result = curl_exec($ch);
+
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        // Define the url endpoint
-		$api_url = "http://localhost:8000/api/users";
-
-		// Initialize the cURL session with the defined url
-		$client = curl_init($api_url);
-
-        // Set the url and the client
-		curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
-
-        // Make the get request and save the response.
-		$response = curl_exec($client);
         
-        // Close the cURL session
-        curl_close($client);
-
-		$data['users'] = json_decode($response);
+        curl_close($ch);
 
 		return redirect()->to('/'); 
 	}

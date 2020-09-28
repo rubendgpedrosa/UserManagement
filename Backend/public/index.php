@@ -68,7 +68,7 @@ $app->put('/api/user[/{id}]', function (Request $request, Response $response, $i
 
 // Receives the ID of the user that was requested to be deleted
 $app->delete('/api/user[/{id}]', function (Request $request, Response $response, $id) use($db, $app) {
-    $row = $db->users()->where('id', $request->getParsedBodyParam("id"));
+    $row = $db->users()->where('id', $id);
     $result = $row->delete();
     $newResponse = $response->withJson($result, 200);
     return $newResponse;
