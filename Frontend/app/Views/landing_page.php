@@ -69,7 +69,9 @@
 				<div class="flex inline-block">
 				<p class="font-bold text-lg uppercase text-gray-700"><?php
 				// DISPLAYS THE FIRST AND LAST NAME ON THE USERS CARD.
-				$name_ar = explode(' ', $user->name); echo $name_ar[0] . ' ' . $name_ar[count($name_ar) - 1];
+				$name_ar = explode(' ', $user->name);
+				// In case we have only a name, we only display a name!
+				echo $name_ar[0] . ' '; count($name_ar) > 1 ? print $name_ar[count($name_ar) - 1] . ' ':''
 				?></p></div>
 				<div class="flex inline-block">
 				<svg class="h-5 w-5 my-1 mr-2 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

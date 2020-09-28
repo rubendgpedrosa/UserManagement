@@ -52,6 +52,7 @@ class Users extends Controller {
         // Convert data from JSON to an Array
         $data = json_decode($response, true);
 
+        // We use the user id as the key value in the Array
         $newData['user'] = $data[$user_id];
 
         return view('user_profile', $newData);

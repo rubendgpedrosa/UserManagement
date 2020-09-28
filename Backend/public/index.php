@@ -7,7 +7,7 @@ include "NotORM.php";
 
 require __DIR__ . '/../vendor/autoload.php';
 
-// Add Database Connection
+// Add Database Connection information
 $connection = new PDO("mysql:host=172.17.0.2;dbname=riseup", 'root', 'mysql');
 $db = new NotORM($connection);
 
@@ -73,12 +73,5 @@ $app->delete('/api/user[/{id}]', function (Request $request, Response $response,
     $newResponse = $response->withJson($result, 200);
     return $newResponse;
 });
-
-
-/* $app->get('/hello/{name}', function (Request $request, Response $response, $args) {
-    $name = $args['name'];
-    $response->getBody()->write("Hello, $name");
-    return $response;
-}); */
 
 $app->run();

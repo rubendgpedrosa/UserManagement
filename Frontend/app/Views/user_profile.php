@@ -18,8 +18,9 @@
 	<div class="flex align-center justify-center">
 		<p class="text-6xl font-bold uppercase text-purple-400"><?php
 				// DISPLAYS THE FIRST AND LAST NAME ON THE USERS CARD.
-				$name_ar = explode(' ', $user['name']); echo $name_ar[0] . ' ' . $name_ar[count($name_ar) - 1];
-				?> Profile</p>
+        $name_ar = explode(' ', $user['name']);
+        // In case we have only a name, we only display a name!
+        echo $name_ar[0] . ' '; count($name_ar) > 1 ? print $name_ar[count($name_ar) - 1] . ' ':''?>Profile</p>
 	</div>
 
 </header>
