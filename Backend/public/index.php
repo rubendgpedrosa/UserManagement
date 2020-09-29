@@ -8,11 +8,10 @@ include "NotORM.php";
 require __DIR__ . '/../vendor/autoload.php';
 
 // Database Information
-$servername = '172.17.0.2';
-$username = 'root';
-$password = 'mysql';
-$database = 'riseup';
-
+$servername = 'YOU_DATABASE_ADDRESS';
+$username = 'YOUR_DATABASE_USERNAME';
+$password = 'YOUR_DATABASE_PASSWORD';
+$database = 'YOUR_DATABASE_NAME';
 
 // Add Database Connection information
 try {

@@ -6,6 +6,8 @@ Web page, built with CodeIgniter as a Frontend, that lets you manage information
 Create an account and start adding your products to your list to keep track of prices and discounts.
 
 ```
+# Fill up /Backend/public/index.php with databasedata
+
 # Install packages with composer on both folders
 cd Frontend & composer install
 cd Backend & composer install
@@ -13,7 +15,7 @@ cd Backend & composer install
 # Run the server on :8000
 cd Backend & php -S localhost:8000 -t public
 
-# Run client on :8080
+# Run frontend on :8080
 cd Frontend & php spark serve
 
 ```
