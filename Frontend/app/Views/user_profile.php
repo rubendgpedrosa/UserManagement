@@ -27,9 +27,9 @@
 
 <!-- CONTENT -->
 
-<div class="relative flex content-center flex-wrap text-gray-700 bg-gray-200 h-auto mx-64">
+<div class="relative flex content-center flex-wrap text-gray-700 bg-gray-200 h-auto mx-64 border-2 border-gray-100 rounded-lg">
 <!-- Delete button -->
-<form action="delete_user/<?php echo $user['id'] ?>" method="post" enctype="multipart/form-data"><button ><svg class="h-8 w-8 m-2 absolute top-0 right-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<form action="delete_user/<?php echo $user['id'] ?>" method="post" enctype="multipart/form-data"><button class="hover:text-red-500"><svg class="h-10 w-10 m-4 absolute top-0 right-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
 </svg></button></form>
 <form class="w-full max-w-lg mx-auto py-8" action="update_user/<?php echo $user['id'] ?>" method="post" enctype="multipart/form-data">
@@ -130,10 +130,6 @@
     </svg>
     HOMEPAGE</div>
     </button>
-
-<!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
-
-<!-- SCRIPTS -->
 
 <script>
 

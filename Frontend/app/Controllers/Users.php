@@ -116,8 +116,11 @@ class Users extends Controller {
     }
     
     public function delete_user( $user_id = NULL){
+
+        // Set the endpoint with the user id to be deleted
         $url = "http://localhost:8000/api/user/".$user_id;
 
+        // Start cURL client
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -127,7 +130,7 @@ class Users extends Controller {
         $result = curl_exec($ch);
 
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        
+
         curl_close($ch);
 
 		return redirect()->to('/'); 

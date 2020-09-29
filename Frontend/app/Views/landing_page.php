@@ -91,12 +91,13 @@
 			</div>
 		</div>
 		<?php } ?>
+		<?php if($users == null) {  ?>
+			<div class="text-2xl text-gray-700 font-bold p-4 w-full text-center uppercase">
+				No users found!
+			</div>
+		<?php } ?>
 	</div>
 
-
-<!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
-
-<!-- SCRIPTS -->
 
 <script>
 

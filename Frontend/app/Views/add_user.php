@@ -23,7 +23,7 @@
 
 <!-- CONTENT -->
 
-<div class="flex content-center flex-wrap text-gray-700 bg-gray-200 h-auto mx-64">
+<div class="flex content-center flex-wrap text-gray-700 bg-gray-200 h-auto mx-64 border-2 border-gray-100 rounded-lg">
 <form class="w-full max-w-lg mx-auto py-8" action="create_user" method="POST" enctype="multipart/form-data">
 <!-- Image stuff is placed here -->
   <div class="flex flex-wrap -mx-6 mb-4">
@@ -122,10 +122,6 @@
     HOMEPAGE</div>
     </button>
 </div>
-
-<!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
-
-<!-- SCRIPTS -->
 
 <script>
 
