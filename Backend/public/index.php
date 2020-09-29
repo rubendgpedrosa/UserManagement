@@ -7,9 +7,44 @@ include "NotORM.php";
 
 require __DIR__ . '/../vendor/autoload.php';
 
+// Database Information
+$servername = '172.17.0.2';
+$username = 'root';
+$password = 'mysql';
+$database = 'riseup';
+
+
 // Add Database Connection information
-$connection = new PDO("mysql:host=172.17.0.2;dbname=riseup", 'root', 'mysql');
+try {
+    $conn = new PDO("mysql:host=$servername", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = "CREATE DATABASE IF NOT EXISTS ".$database;
+    $conn->exec($sql);
+    $sql = "use ".$database;
+    $conn->exec($sql);
+    $sql_table = "CREATE TABLE IF NOT EXISTS `users` (
+        `id` int unsigned NOT NULL AUTO_INCREMENT,
+        `name` varchar(255) NOT NULL,
+        `email` varchar(50) NOT NULL,
+        `age` int unsigned NOT NULL,
+        `phone_number` varchar(15) DEFAULT NULL,
+        `city` varchar(50) NOT NULL,
+        `country` varchar(50) NOT NULL,
+        `zip_code` varchar(20) DEFAULT NULL,
+        PRIMARY KEY (`id`)
+    );";
+    $conn->exec($sql_table);
+}
+catch(PDOException $e)
+{
+    echo $sql . "<br>" . $e->getMessage();
+}
+
+$conn = null;
+
+$connection = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 $db = new NotORM($connection);
+
 //Defining the table so we don't repeat the same stuff over and over again
 $table = $db->users();
 

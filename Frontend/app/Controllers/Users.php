@@ -23,12 +23,12 @@ class Users extends Controller {
 		curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
 
         // Make the get request and save the response.
-		$response = curl_exec($client);
+        $response = curl_exec($client);
         
         // Close the cURL session
         curl_close($client);
 
-		$data['users'] = json_decode($response);
+        $data['users'] = json_decode($response);
 
 		return view('landing_page', $data);	
 	}
