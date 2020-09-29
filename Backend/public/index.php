@@ -22,7 +22,7 @@ $app->addErrorMiddleware(true, true, true);
 // Add routes
 // Returns all users after retrieving the data from the db.
 $app->get('/api/users', function (Request $request, Response $response) use($table, $app) {
-    $data = $table;
+    $data = $table->limit(9);
     $newResponse = $response->withJson($data, 200);
     return $newResponse;
 });
