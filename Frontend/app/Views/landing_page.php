@@ -37,7 +37,7 @@
 <!-- CONTENT -->
 
 <div class="relative flex content-center flex-wrap text-gray-700 bg-gray-100 h-auto sm:mx-auto md:mx-64 border-2 border-gray-100 rounded-lg">
-	<div class="relative py-6 w-full p-2 mb-2 bg-gray-300 border-2 border-gray-300">
+	<div class="relative py-6 w-full p-2 mb-4 bg-gray-300 border-2 border-gray-300">
 
 	<!-- BUTTON THAT LOADS NEW VIEW INTO PLACE TO CREATE NEW USERS -->
 	<button class="absolute right-0 top-0 bg-green-500 hover:bg-green-600 text-white hover:shadow font-bold py-2 m-4 px-4 rounded inline-flex items-center" onclick="window.location='<?php echo base_url("users");?>'">
@@ -95,17 +95,7 @@
 				No users found!
 			</div>
 		<?php } ?>
-		<?php if($users != null) { ?>
-		<span class="bg-gray-300 w-full mx-4 mt-2" style="padding-top: 1px"></span>
-		<div class="inline-flex m-4 h-12 justify-center align-center w-full">
-		<button class="focus:outline-none bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-l">
-			Prev
-		</button>
-		<button class="focus:outline-none bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-r">
-			Next
-		</button>
-		</div>
-		<?php } ?>
+		<span class="bg-gray-300 w-full m-4" style="padding-top: 1px" />
 	</div>
 
 <script>

@@ -13,7 +13,7 @@ class Users extends Controller {
      
     public function index()
 	{
-		// Define the url endpoint
+        // Define the url endpoint
 		$api_url = "http://localhost:8000/api/users";
 
 		// Initialize the cURL session with the defined url
